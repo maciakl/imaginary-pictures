@@ -2,7 +2,7 @@
 <html class="no-js">
     <head>
         <meta charset="utf-8">
-        <title>wow pictures</title>
+        <title>imaginary pictures</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="shortcut icon" href="/favicon.ico">
@@ -15,32 +15,92 @@
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
+        <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     </head>
     <body>
         <!--[if lt IE 10]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser.
+            Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
 
         <div class="container">
             <div class="header">
                 <ul class="nav nav-pills pull-right">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li>
+                    <button class="btn btn-default" data-toggle="modal" data-target="#myModal">
+                        <span class="glyphicon glyphicon-question-sign"></span>
+                        About
+                    </button></li>
                 </ul>
-                <h3 class="text-muted">wow pictures</h3>
+                <h1 class="title">imaginary pictures</h1>
+                <h4 class="text-muted">fantasy heroes, monsters & landscapes</h4>
             </div>
 
             <div class="row marketing" id="images">
             </div>
 
             <div class="footer">
-                <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+                <p><span class="glyphicon glyphicon-copyright-mark"></span> 
+                2014 <a href="http://maciak.net">Luke</a></p>
             </div>
 
         </div>
 
+        <!-- About Page -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
+            aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                  &times;</button>
+              <h3 class="modal-title" id="myModalLabel">
+                  <span class="glyphicon glyphicon-question-sign"></span>
+                  About <strong class="title">imaginary.pictures</strong></h3>
+            </div>
+            <div class="modal-body">
+
+                <p>This gallery is dynamically generated based on user submissions
+                to hand picked list of fantasy themed picture subreddits. All of
+                the images you see on this page have been submitted and upvoted
+                by reddit users.</p>
+
+                <p>Below each picture, you can see link to the Reddit discussion
+                thread, information about upvote/downvote scores, name of the
+                Reddit user who submitted the it, as well as a link to the
+                original image.</p>
+
+                <p>Please excuse duplicates. They are caused by users cross-posting images
+                between subreddits.</p>
+
+                <p>At the moment this gallery only scrapes direct image links. Posts linking
+                to galleries, or Deviant Art pages are ignored.</p>
+
+                <p>The source code for <strong class="title">imaginary.pictures</strong>
+                is available on github:</p>
+
+                <p><a href="https://github.com/maciakl/imaginary-pictures"
+                    class="btn btn-lg btn-default">
+                    <span class="fa fa-github"></span>
+                    imaginary-pictures
+                </a></p>
+
+                <p>You can contact the author at
+                <span class="fa fa-twitter"></span> <a href="http://twitter.com/LukeMaciak">
+                    @LukeMaciak</a>.</p>
+
+                <small class="text-muted">If you know a good fantasy art subreddit that does not
+                seem to be represented here, please suggest it via twitter.</small>
+
+            </div>
+            <div class="modal-footer">
+                <!-- modal footer stuff -->
+            </div>
+          </div>
+        </div>
+      </div>
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
