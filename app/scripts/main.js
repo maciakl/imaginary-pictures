@@ -15,9 +15,7 @@ $.getJSON('http://www.reddit.com/user/reset_by_peer/m/imaginary/.json?jsonp=?&sh
         new IsValidImageUrl(item.data.url, function(isvalid) {
 
             if(isvalid) {
-
-                $('#images').append(
-                    $('<div />').addClass('col-xs-12')
+                $('#images').append( $('<div />').addClass('col-xs-12')
                     .append(
                         $('<div />').addClass('thumbnail')
                         .append(
@@ -30,6 +28,7 @@ $.getJSON('http://www.reddit.com/user/reset_by_peer/m/imaginary/.json?jsonp=?&sh
                             .append($('<small />')
                                 .append(
                                     $('<a />').attr('href', 'http://reddit.com'+item.data.permalink)
+                                    .attr("target", "_blank")
                                     .addClass('btn btn-default btn-xs')
                                     .append($('<span />').addClass('fa fa-reddit'))
                                     .append(' ' + item.data.subreddit)
@@ -57,6 +56,7 @@ $.getJSON('http://www.reddit.com/user/reset_by_peer/m/imaginary/.json?jsonp=?&sh
                                 .append(' ')
                                 .append(
                                     $('<a />').attr('href', item.data.url)
+                                    .attr("target","_blank")
                                     .addClass('btn btn-default btn-xs')
                                     .append($('<span />').addClass('fa fa-image'))
                                     .append(' ' + item.data.domain)
@@ -65,6 +65,29 @@ $.getJSON('http://www.reddit.com/user/reset_by_peer/m/imaginary/.json?jsonp=?&sh
                         )
                     )
                 );
+            }
+            else
+            {
+                if(!item.data.is_self)
+                {
+                    $('#thumbs').append( $('<div />').addClass('col-xs-6 col-sm-3 col-md-2')
+                        .append(
+                            $('<div />').addClass('thumbnail')
+                            .append(
+                                $('<a />').attr('href', item.data.url)
+                                .attr("target", "_blank")
+                                .append(
+                                    $('<img />').attr('src', item.data.thumbnail)
+                                    .attr('alt', item.data.title)
+                                    .attr('title', item.data.title)
+                                    .addClass('img-responsive img-rounded')
+                                    .height(70)
+                                    .width(70)
+                                )
+                            )
+                        )
+                    );
+                }
             }
         });
     });
