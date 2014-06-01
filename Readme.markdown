@@ -1,6 +1,8 @@
 imaginary.pics
 ==============
 
+[![Code Climate](https://codeclimate.com/github/maciakl/imaginary-pictures.png)](https://codeclimate.com/github/maciakl/imaginary-pictures)
+
 Source code for [imaginary.pics](http://imaginary.pics).
 
 The site is basic HTML5+JS. Uses Bootstrap 3 and jQuery.

@@ -28,7 +28,7 @@ $.getJSON('http://www.reddit.com/user/reset_by_peer/m/imaginary/.json?jsonp=?&sh
                             .append($('<small />')
                                 .append(
                                     $('<a />').attr('href', 'http://reddit.com'+item.data.permalink)
-                                    .attr("target", "_blank")
+                                    .attr('target', '_blank')
                                     .addClass('btn btn-default btn-xs')
                                     .append($('<span />').addClass('fa fa-reddit'))
                                     .append(' ' + item.data.subreddit)
@@ -56,7 +56,7 @@ $.getJSON('http://www.reddit.com/user/reset_by_peer/m/imaginary/.json?jsonp=?&sh
                                 .append(' ')
                                 .append(
                                     $('<a />').attr('href', item.data.url)
-                                    .attr("target","_blank")
+                                    .attr('target','_blank')
                                     .addClass('btn btn-default btn-xs')
                                     .append($('<span />').addClass('fa fa-image'))
                                     .append(' ' + item.data.domain)
@@ -75,7 +75,7 @@ $.getJSON('http://www.reddit.com/user/reset_by_peer/m/imaginary/.json?jsonp=?&sh
                             $('<div />').addClass('thumbnail')
                             .append(
                                 $('<a />').attr('href', item.data.url)
-                                .attr("target", "_blank")
+                                .attr('target', '_blank')
                                 .append(
                                     $('<img />').attr('src', item.data.thumbnail)
                                     .attr('alt', item.data.title)
