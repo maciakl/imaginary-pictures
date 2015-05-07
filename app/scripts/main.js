@@ -1,6 +1,6 @@
 'use strict';
 
-var LIMIT = 500;
+var LIMIT = 1000;
 
 function IsValidImageUrl(url, callback) {
     var img = new Image();
@@ -39,12 +39,6 @@ $.getJSON('http://www.reddit.com/user/reset_by_peer/m/imaginary/.json?jsonp=?&sh
                                     .addClass('label label-warning')
                                     .append($('<span />').addClass('fa fa-arrow-up'))
                                     .append(' ' + item.data.ups)
-                                )
-                                .append(
-                                    $('<span />')
-                                    .addClass('label label-info')
-                                    .append($('<span />').addClass('fa fa-arrow-down'))
-                                    .append(' ' + item.data.downs)
                                 )
                                 .append(' ')
                                 .append(
