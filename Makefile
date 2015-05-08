@@ -2,7 +2,7 @@
 
 default:
 	@echo -e "Available options are:\n"
-	@echo -e "\tchekck\t- to check for dependencies"
+	@echo -e "\tcheck\t- to check for dependencies"
 	@echo -e "\tdeploy\t- to deploy to host"
 
 check:
@@ -12,4 +12,3 @@ check:
 
 deploy: check
 	rsync --compress --recursive --checksum --delete --itemize-changes dist/* maciakl@imaginary.pics:~/imaginary.pics/
-	#ssh maciakl@atum.dreamhost.com 'chmod -R 755 ~/gigiedgleyfansite.com'
